@@ -5,7 +5,7 @@ import akka.http.scaladsl.server.Route
 import akka.util.Timeout
 import com.knoldus.json.JsonSupport
 import com.knoldus.model.{PostRequest, PostResponse}
-import com.knoldus.service.CalculatorService
+import com.knoldus.service.CrawlerService
 
 import scala.concurrent.duration._
 import scala.language.postfixOps
@@ -16,8 +16,9 @@ trait PostRoute extends JsonSupport {
     post {
       path("postUrlRoute") {
         entity(as[PostRequest]) {
-          postResponse => {
-            complete(CalculatorService.getResponse(postResponse))
+          postRequest => {
+            println(s"here:::::: ")
+            complete(CrawlerService.getResponse(postRequest))
           }
         }
       }

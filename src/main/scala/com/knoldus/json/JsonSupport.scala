@@ -5,7 +5,7 @@ import com.knoldus.model.{PostRequest, PostResponse}
 import spray.json.{DefaultJsonProtocol, RootJsonFormat}
 
 trait JsonSupport extends SprayJsonSupport with DefaultJsonProtocol {
-  implicit val postUrlFormat: RootJsonFormat[PostResponse] = jsonFormat2(PostResponse)
+  implicit val postUrlFormat: RootJsonFormat[PostResponse] = jsonFormat3(PostResponse)
   implicit val postUrlRequest: RootJsonFormat[PostRequest] = jsonFormat1(PostRequest)
 
 }

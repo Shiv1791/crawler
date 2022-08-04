@@ -3,14 +3,13 @@ package com.knoldus.service
 import com.knoldus.model.{PostRequest, PostResponse}
 
 
-object CalculatorService {
+object CrawlerService {
 
   def getResponse(postResponse: PostRequest): List[PostResponse] = {
-    postResponse.urls.map{ url=>
-      val urlData = io.Source.fromURL(url)
+    postResponse.urls.map { url=>
+      val urlData = io.Source.fromURL(url).getLines().next()
       val data = urlData.mkString
-      urlData.close()
-      PostResponse(url,  data)
+      PostResponse(url,  data, "")
     }
   }
 }
