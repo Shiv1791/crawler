@@ -4,7 +4,7 @@ import akka.http.scaladsl.server.Directives.{complete, _}
 import akka.http.scaladsl.server.Route
 import akka.util.Timeout
 import com.knoldus.json.JsonSupport
-import com.knoldus.model.{PostRequest, PostResponse}
+import com.knoldus.model.PostRequest
 import com.knoldus.service.CrawlerService
 
 import scala.concurrent.duration._

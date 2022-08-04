@@ -7,8 +7,7 @@ import com.knoldus.json.JsonSupport
 import com.knoldus.model.{PostRequest, PostResponse}
 import com.knoldus.routes.PostRoute
 import com.knoldus.service.CrawlerService
-import com.knoldus.service.CrawlerService.getResponse
-import org.mockito.Mockito.{mock, when}
+import org.mockito.Mockito.when
 import org.scalatest.concurrent.ScalaFutures._
 import org.scalatest.{Matchers, WordSpecLike}
 

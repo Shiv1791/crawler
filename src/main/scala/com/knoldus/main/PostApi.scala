@@ -1,13 +1,10 @@
 package com.knoldus.main
 
 import akka.actor.ActorSystem
-import akka.http.javadsl.server.directives.LogEntry.info
 import akka.http.scaladsl.Http
-import akka.stream.ActorMaterializer
 import com.knoldus.routes.PostRoute
 import com.knoldus.util.Constants.DEFAULT_PORT
 import com.knoldus.util.RoutesConfig
-import com.sun.net.httpserver.HttpsServer
 
 import scala.concurrent.ExecutionContext.Implicits.global
 import scala.io.StdIn

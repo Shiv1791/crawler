@@ -1,8 +1,7 @@
 package com.knoldus.util
 
-import com.typesafe.config.{ Config, ConfigFactory }
+import com.typesafe.config.{Config, ConfigFactory}
 
-import scala.collection.JavaConverters._
 import scala.util.Try
 
 /**
