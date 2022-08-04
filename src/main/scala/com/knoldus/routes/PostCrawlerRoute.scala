@@ -14,9 +14,9 @@ import scala.language.postfixOps
  * post route that gave post response according to given input
  *
  * */
-trait PostRoute extends JsonSupport {
+trait PostCrawlerRoute extends JsonSupport {
 
-  lazy val postUrlRoute: Route =
+  lazy val postCrawlerRoute: Route =
     post {
       path("postUrlRoute") {
         entity(as[PostRequest]) {
