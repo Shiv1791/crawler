@@ -10,6 +10,10 @@ import com.knoldus.service.CrawlerService
 import scala.concurrent.duration._
 import scala.language.postfixOps
 
+/**
+ * post route that gave post response according to given input
+ *
+ * */
 trait PostRoute extends JsonSupport {
 
   lazy val postUrlRoute: Route =
@@ -17,7 +21,6 @@ trait PostRoute extends JsonSupport {
       path("postUrlRoute") {
         entity(as[PostRequest]) {
           postRequest => {
-            println(s"here:::::: ")
             complete(CrawlerService.getResponse(postRequest))
           }
         }
